@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&family=Martian+Mono:wght@600&family=Neuton:wght@200&family=Sono&display=swap');
+
+@import "./hide_scrollbar.css";
+@import "../styles/navigation.css";
+@import "../styles/footer.css";
+
+body {
+    font-family: 'Ibarra Real Nova', serif;
+    background-color: #fdfdfd;
+    height: 100%;
+    overflow: auto;
+    margin: 0;
+}
+
+html {
+    overflow: hidden;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    animation: fadeInTop 1s;
+    -webkit-animation: fadeInTop 1s;
+    -moz-animation: fadeInTop 1s;
+    -o-animation: fadeInTop 1s;
+    -ms-animation: fadeInTop 1s;
+    animation-duration: 10s;
+    animation-fill-mode: both
+}
+
+section {
+    padding: 4em 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1150px;
+    margin: 0 auto; /* Center the container horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Heading and the Image at the start of the Main Page*/
+header {
+    background-image: url(../media/backgrounds/header_picture.jpeg);
+    background-size: cover;
+    background-position: center 70%;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: #fdfdfd;
+}
+
+footer {
+    padding: 1em;
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.heading p {
+  font-size: 1.1em;
+  text-transform:lowercase;
+  margin-left: 27%;
+  margin:2em auto 2.8em auto;
+  animation: fadeInTop 3s;
+  -webkit-animation: fadeInTop 3s;
+  -moz-animation: fadeInTop 3s;
+  -o-animation: fadeInTop 3s;
+  -ms-animation: fadeInTop 3s;
+  animation-duration: 10s;
+  animation-fill-mode: both;
+}
+
+/* FadeInTop animation from Top */
+@keyframes fadeInTop {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slow and Centered Bouncing Play Button  */
+.heading .play_button a {
+    position: relative;
+    display: inline-block;
+}
+
+/* Apply animations to the play button */
+.heading .play_button a::before {
+    content: '\25B6'; /* Unicode character for play symbol */
+    font-size: 30px; /* Adjust the size of the triangle */
+    color: #fdfdfd;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fadeInTop 5s, bounceAnimation 10s infinite ease-in-out; /* Adjust the duration for slower movement */
+    -webkit-animation: fadeInTop 5s, bounceAnimation 10s infinite ease-in-out;
+    -moz-animation: fadeInTop 5s, bounceAnimation 10s infinite ease-in-out;
+    -o-animation: fadeInTop 5s, bounceAnimation 10s infinite ease-in-out;
+    -ms-animation: fadeInTop 5s, bounceAnimation 10s infinite ease-in-out;
+    animation-duration: 20s;
+    animation-fill-mode: both;
+}
+
+@keyframes bounceAnimation {
+    0%, 100% {
+        transform: translate(-50%, -50%) scaleY(0.8); /* Start and end position (center) */
+    }
+    25%, 75% {
+        transform: translate(-50%, -50%) scaleY(1.2); /* Midway position (scaled up) */
+    }
+    50% {
+        transform: translate(-50%, -50%) scaleY(0.8); /* Peak of the bounce (scaled down) */
+    }
+}
+
+
+
+#about_project p {
+    margin: 1em 0;
+    line-height: 25px;
+    max-width: 50em;
+    font-size: 1em;
+}
+
+#about_project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #010440;
+    color: #FFFFFF;
+    font-size: 90%;
+}
+
+#about_project h2 {
+    width: 100%; 
+}
+
+#about_project iframe {
+	width: 60%;
+	aspect-ratio: 16 / 9;
+}
+
+@media (max-width: 768px) {
+    #about_project iframe {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+    }
+}

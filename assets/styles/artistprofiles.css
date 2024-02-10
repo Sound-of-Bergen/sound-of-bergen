@@ -1,0 +1,115 @@
+@import "./hide_scrollbar.css";
+@import "../styles/navigation.css";
+@import "../styles/footer.css";
+
+/* insert font here when chosen */
+/* css für navigation einfügen, wenn fertig */
+
+body {
+	background: url('../media/backgrounds/header_picture.jpeg'); 
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+    padding: 0;
+	margin: 0;
+
+	/* align-items: center; */
+	min-height: 100vh;
+    /* text-align: center; */
+    display: flex;
+	flex-direction: column;
+
+	font-family: 'Ibarra Real Nova', serif;
+}
+
+h1 {
+	color: #fdfdfd;
+	text-align: center;
+	font-size: 3em;
+}
+
+main {
+	flex: 1;
+    max-width: 90%;
+    margin: 0 auto;
+    /* padding: 20px; */
+}
+
+a {
+    color: lightblue;
+}
+
+.video-container img {
+    border-style: solid;
+	border-color: #fdfdfd;
+	/* padding: 0.5em; */
+	max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.video-container iframe {
+	width: 100%;
+	aspect-ratio: 16 / 9;
+}
+
+iframe {
+	width: 50%;
+	aspect-ratio: 16 / 9;
+	border-radius: 12px;
+}
+
+main p {
+	color: #fdfdfd;
+	max-width: 100%;
+	text-align: left;
+	padding-left: 1.5em;
+}
+
+.profile-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto;
+	gap: 1em;
+	max-width: 95%;
+	margin: 0 auto;
+}
+
+.profile-container > iframe {
+	grid-column: 1 / -1;
+    width: 50%;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    display: block;
+    margin: 20px auto;
+}
+
+.caption {
+	font-size: 1em;
+	color: #fdfdfd;
+	margin-top: 10px;
+	text-align: center;
+}
+
+@media (max-width: 768px) {
+    .profile-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .profile-container > p {
+        grid-column: 1;
+        order: 1; /* Stellt den Text an die erste Position */
+    }
+
+    .profile-container > .video-container {
+        grid-column: 1;
+        order: 2; /* Stellt das Video an die zweite Position */
+    }
+
+    .profile-container > iframe {
+        grid-column: 1;
+        order: 3; /* Stellt den Spotify iframe an die dritte Position */
+        width: 100%; /* Setzt die Breite des iframes auf 100% für bessere Anzeige */
+    }
+}

@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&family=Martian+Mono:wght@600&family=Neuton:wght@200&family=Sono&display=swap');
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: #fdfdfd;
+    padding: 0.5em 1em;
+    position: fixed;
+    top: 0;
+    width: -webkit-fill-available;
+    z-index: 1000;
+
+    color: #fdfdfd;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-family: 'Ibarra Real Nova', serif;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: normal;
+}
+
+.navbar a {
+    color: #fdfdfd;
+    text-decoration: none;
+    padding: 0.5em;
+}
+
+.logo-home-link {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.logo-home-link img {
+    height: 1em;
+    margin-right: 10px;
+}
+
+.nav-link {
+    margin-left: 10px; /* Verringert den Abstand zwischen den rechten Links */
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-link {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+    }
+}
+
+main {
+    padding-top: 2.5em;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding-top: 14em; /* Erhöhen Sie diesen Wert entsprechend, um genug Platz für die Navigationsleiste zu schaffen */
+    }
+}
