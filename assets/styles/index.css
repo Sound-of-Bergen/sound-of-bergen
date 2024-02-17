@@ -199,7 +199,7 @@ footer {
     }
 
  h1 {
-        font-size: 1.4em; /* Adjust font size for mobile */
+        font-size: 1.em; /* Adjust font size for mobile */
         text-align: center; /* Center align text on mobile */
         width: 90%; /* Adjust width for mobile */
         top: 50%; /* Position at 50% from the top */
