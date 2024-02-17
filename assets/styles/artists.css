@@ -92,12 +92,10 @@ img {
     z-index: 1;
 }
 
+
 /* Adjust grid layout for screens smaller than 768px (typical mobile devices) */
 
 @media only screen and (max-width: 768px) {
-    header a {
-        font-size: 0.6em;
-    }
 
     .grid-container {
         grid-template-columns: repeat(1, 1fr); /* Single column for mobile */
@@ -108,28 +106,8 @@ img {
     .heading {
         margin-right: 20%;
     }
-    h1 {
-        font-size: 1.4em;
-        word-spacing: 1.5px;
-    }
     .heading p {
         font-size: 0.8em;
         text-transform: uppercase;
     }
-
-    #ContactUs_form .contactUs_info {
-        width: 100%;
-        margin-left: 10%;
-        color: white;
-        font-size: 0.9em;
-        font-weight: bold;
-    }
-    .contact_column {
-        width: 100%;
-        margin-top: 20px;
-        padding: 25px;
-    }
 }
-
-
-
