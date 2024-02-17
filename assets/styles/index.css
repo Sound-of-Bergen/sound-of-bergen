@@ -1,12 +1,12 @@
-/* This is a single-line comment 
-@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&family=Martian+Mono:wght@600&family=Neuton:wght@200&family=Sono&display=swap');*/
+/* Import Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
-
+/* Import External CSS Files */
 @import "./hide_scrollbar.css";
 @import "../styles/navigation.css";
 @import "../styles/footer.css";
 
+/* Global Styles */
 body {
     font-family: "PT Sans", sans-serif;
     background-color: #fdfdfd;
@@ -15,9 +15,8 @@ body {
     margin: 1;
     padding: 1;
     font-weight: 400;
-  font-style: normal;
+    font-style: normal;
 }
-
 
 html {
     overflow: hidden;
@@ -30,21 +29,19 @@ html {
     box-sizing: border-box;
 }
 
+/* Heading Styles */
 h1 {
     font-size: 2.5em;
     text-transform: uppercase;
-    animation: fadeInTop 1s;
-    -webkit-animation: fadeInTop 1s;
-    -moz-animation: fadeInTop 1s;
-    -o-animation: fadeInTop 1s;
-    -ms-animation: fadeInTop 1s;
-    animation-duration: 10s;
-    animation-fill-mode: both
     position: absolute;
     top: 50%; /* Position at 50% from the top */
     transform: translateY(-50%); /* Translate up by 50% of its own height */
+    animation: fadeInTop 3s;
+    animation-duration: 10s;
+    animation-fill-mode: both;
 }
 
+/* Section Styles */
 section {
     padding: 4em 2em;
     display: flex;
@@ -56,14 +53,9 @@ section {
 .container {
     max-width: 1150px;
     margin: 0 auto; /* Center the container horizontally */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 2em;
 }
 
-/* Heading and the Image at the start of the Main Page*/
+/* Header Styles */
 header {
     background-image: url(../media/backgrounds/header_picture.jpeg);
     background-size: cover;
@@ -77,10 +69,12 @@ header {
     justify-content: center; /* Horizontally center the content */
 }
 
+/* Footer Styles */
 footer {
     padding: 1em;
 }
 
+/* Heading Container Styles */
 .heading {
     display: flex;
     flex-direction: column;
@@ -88,21 +82,19 @@ footer {
     text-align: center;
 }
 
+/* Heading Paragraph Styles */
 .heading p {
-  font-size: 1.1em;
-  text-transform:lowercase;
-  margin-left: 27%;
-  margin:2em auto 2.8em auto;
-  animation: fadeInTop 3s;
-  -webkit-animation: fadeInTop 3s;
-  -moz-animation: fadeInTop 3s;
-  -o-animation: fadeInTop 3s;
-  -ms-animation: fadeInTop 3s;
-  animation-duration: 10s;
-  animation-fill-mode: both;
+    font-size: 1.1em;
+    text-transform: lowercase;
+    margin-top: 5.5em; 
+    margin-left: 27%;
+    margin:12em auto 2.8em auto;
+    animation: fadeInTop 3s;
+    animation-duration: 10s;
+    animation-fill-mode: both;
 }
 
-/* FadeInTop animation from Top */
+/* FadeInTop Animation */
 @keyframes fadeInTop {
     from {
         opacity: 0;
@@ -114,13 +106,13 @@ footer {
     }
 }
 
-/* Slow and Centered Bouncing Play Button  */
+/* Play Button Styles */
 .heading .play_button a {
     position: relative;
     display: inline-block;
 }
 
-/* Apply animations to the play button */
+/* Play Button Animation */
 .heading .play_button a::before {
     content: '\25B6'; /* Unicode character for play symbol */
     font-size: 20px; /* Adjust the size of the triangle */
@@ -129,15 +121,12 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: fadeInTop 5s, bounceAnimation 10s infinite ease-in-out; /* Adjust the duration for slower movement */
-    -webkit-animation: fadeInTop 5s, bounceAnimation 10s infinite ease-in-out;
-    -moz-animation: fadeInTop 5s, bounceAnimation 10s infinite ease-in-out;
-    -o-animation: fadeInTop 5s, bounceAnimation 10s infinite ease-in-out;
-    -ms-animation: fadeInTop 5s, bounceAnimation 10s infinite ease-in-out;
+    animation: fadeInTop 5s, bounceAnimation 10s infinite ease-in-out;
     animation-duration: 20s;
     animation-fill-mode: both;
 }
 
+/* Bounce Animation */
 @keyframes bounceAnimation {
     0%, 100% {
         transform: translate(-50%, -50%) scaleY(0.8); /* Start and end position (center) */
@@ -150,8 +139,7 @@ footer {
     }
 }
 
-
-
+/* About Project Paragraph Styles */
 #about_project p {
     margin: 1em 0;
     line-height: 25px;
@@ -162,6 +150,7 @@ footer {
     margin-right: auto;
 }
 
+/* About Project Container Styles */
 #about_project {
     display: flex;
     flex-direction: column;
@@ -173,27 +162,20 @@ footer {
     font-size: 90%;
 }
 
+/* About Project Heading Styles */
 #about_project h2 {
-    width: 50%; 
+    width: 50%;
     font-size: 2em;
 }
 
+/* About Project Iframe Styles */
 #about_project iframe {
-    width: 90%; 
-    max-width: 800px; 
+    width: 90%;
+    max-width: 800px;
     aspect-ratio: 16 / 9;
 }
 
-@media (max-width: 768px) {
-    #about_project iframe {
-        width: 60%; 
-    }
-
-    #about_project p {
-        max-width: 50%;
-    }
-}
-
+/* Media Container Styles */
 #about_project .media-container {
     display: flex;
     justify-content: center; /* Horizontally center the media and text */
@@ -201,56 +183,18 @@ footer {
     align-items: center; /* Center-align the items horizontally */
 }
 
-
-/* The media queries for a phone starts here  */
-
-@media only screen and (max-width: 769px) {
-    header a {
-        font-size: 0.6em;
-    }
-
-    .heading {
-        margin-right: 20%;
-    }
-
-    h1 {
-        font-size: 1.4em; /* Adjust font size for mobile */
-        text-align: center; /* Center align text on mobile */
-        width: 90%; /* Adjust width for mobile */
-        top: 50%; /* Position at 50% from the top */
-        transform: translateY(-50%); /* Translate up by 50% of its own height */
-    }
-    .heading p {
-        font-size: 0.8em;
-    }
-
-    #ContactUs_form .contactUs_info {
-        width: 100%;
-        margin-left: 10%;
-        color: white;
-        font-size: 0.9em;
-        font-weight: bold;
-    }
-    .contact_column {
-        width: 100%;
-        margin-top: 20px;
-        padding: 25px;
-    }
-}
-
-
-/* Adjust other styles for mobile */
+/* Media Queries */
 @media (max-width: 768px) {
+    #about_project iframe {
+        width: 60%;
+    }
+
+    #about_project p {
+        max-width: 50%;
+    }
+
+    /* Adjusted Play Button Font Size for Smaller Screens */
     .heading .play_button a::before {
-        font-size: 16px; /* Adjusted font size for smaller screens */
+        font-size: 16px;
     }
 }
-
-
-
-
-
-
-
-
-
