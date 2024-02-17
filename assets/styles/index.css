@@ -141,13 +141,11 @@ footer {
 
 /* About Project Paragraph Styles */
 #about_project p {
-    margin: 1em 0;
-    line-height: 25px;
-    max-width: 25em;
-    font-size: 1.5em;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 50%; /* Limit width of text */
+    text-align: left; /* Align text to the left */
+    margin: 0 auto 1em auto; /* Center the text and add spacing below */
+    color: #FFFFFF; /* Adjusted for better readability */
+
 }
 
 /* About Project Container Styles */
@@ -160,52 +158,94 @@ footer {
     background-color: #010440;
     color: #FFFFFF;
     font-size: 90%;
+    padding: 4em 2em; /* Adjust padding */
+    min-height: 100vh; /* Ensure the container takes up at least the full viewport height */
+
 }
 
 /* About Project Heading Styles */
 #about_project h2 {
-    width: 50%;
     font-size: 2em;
+    text-align: center; 
+    margin-bottom: 1em; /* Add spacing below the heading */
+
 }
 
-/* About Project Iframe Styles */
-#about_project iframe {
-    width: 90%;
-    max-width: 800px;
+iframe {
+    width: 50%;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+}
+
+.video-container iframe {
+    width: 100%;
     aspect-ratio: 16 / 9;
 }
 
 /* Media Container Styles */
 #about_project .media-container {
-    display: flex;
-    justify-content: center; /* Horizontally center the media and text */
-    flex-direction: column; /* Ensure both media and text are in a column layout */
-    align-items: center; /* Center-align the items horizontally */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1em;
+    max-width: 95%;
+    margin: 0 auto;
 }
 
-/* Media Queries */
+.profile-container > iframe {
+    grid-column: 1 / -1;
+    width: 50%;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    display: block;
+    margin: 20px auto;
+}
+
+
 @media (max-width: 768px) {
-    #about_project iframe {
-        width: 60%;
-    }
-
-    #about_project p {
-        max-width: 50%;
-    }
-
     /* Adjusted Play Button Font Size for Smaller Screens */
     .heading .play_button a::before {
         font-size: 16px;
     }
 
- h1 {
-        font-size: 1.em; /* Adjust font size for mobile */
-        text-align: center; /* Center align text on mobile */
-        width: 90%; /* Adjust width for mobile */
-        top: 50%; /* Position at 50% from the top */
-        transform: translateY(-50%); /* Translate up by 50% of its own height */
+    h1 {
+        font-size: 1.4em;
+        width: 90%;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
+
+    .video-container {
+        width: 100%;
+    }
+
+    /* Adjust the width of the playlist iframe */
+    .iframe {
+        width: 100%;
+    }
+
     .heading p {
         font-size: 0.8em;
+    }
+
+    .media-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .media-container > #about_project p{
+        grid-column: 1;
+        order: 1;
+    }
+
+    .media-container > .video-container{
+        grid-column: 1;
+        order: 2;
+    }
+    
+    .media-container > iframe {
+        grid-column: 1;
+        order: 3;
+        width: 100%;
     }
 }
