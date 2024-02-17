@@ -9,12 +9,13 @@ body {
 	background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
-	padding: 2;
-	margin: 1;
+	padding: 0;
+	margin: 0;
 	/* align-items: center; */
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+	overflow: auto;
 }
 
 h1 {
@@ -63,7 +64,7 @@ main p {
 /* Media Query for smaller screens */
 @media only screen and (max-width: 600px) {
     .text-box {
-        max-width: 80%; /* Set a smaller maximum width for the container */
+        max-width: 90%; /* Set a smaller maximum width for the container */
     }
 }
 
