@@ -66,9 +66,3 @@
 main {
     padding-top: 2.5em;
 }
-
-@media (max-width: 768px) {
-    main {
-        padding-top: 14em; /* Erhöhen Sie diesen Wert entsprechend, um genug Platz für die Navigationsleiste zu schaffen */
-    }
-}
