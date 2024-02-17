@@ -197,4 +197,15 @@ footer {
     .heading .play_button a::before {
         font-size: 16px;
     }
+
+ h1 {
+        font-size: 1.4em; /* Adjust font size for mobile */
+        text-align: center; /* Center align text on mobile */
+        width: 90%; /* Adjust width for mobile */
+        top: 50%; /* Position at 50% from the top */
+        transform: translateY(-50%); /* Translate up by 50% of its own height */
+    }
+    .heading p {
+        font-size: 0.8em;
+    }
 }
