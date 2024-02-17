@@ -88,3 +88,15 @@ a {
         order: 0; /* Standardreihenfolge beibehalten */
     }
 }
+
+
+main {
+    padding-top: 80px; /* Add padding to the top to prevent content from being covered by the navbar */
+}
+
+/* Media query for screens smaller than 768px (typical mobile devices) */
+@media only screen and (max-width: 768px) {
+    main {
+        padding-top: 100px; /* Adjust padding for mobile devices */
+    }
+}

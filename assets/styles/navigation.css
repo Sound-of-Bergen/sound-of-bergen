@@ -62,10 +62,17 @@
     .logo-home-link {
         margin-right: 0; /* Remove the right margin for the logo */
     }
+    main {
+        padding-top: 100px; /* Adjust this value for mobile devices */
+    }
+
+    h1 {
+        font-size: 2em; /* Adjust the font size for mobile devices */
+    }
 }
 
 main {
-    padding-top: 100px; /* Adjust this value according to the height of your navbar */
+    padding-top: 80px; /* Adjust this value according to the height of your navbar */
 }
 
 h1 {

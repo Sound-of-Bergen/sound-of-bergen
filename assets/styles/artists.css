@@ -21,6 +21,9 @@ h1 {
 	text-align: center;
 	color: #fdfdfd;
 	font-size: 3em;
+    z-index: 1; /* Add this line */
+    position: relative; /* Add this line */
+    background-color: transparent; /* Add this line if needed */
 }
 
 main p {
@@ -109,5 +112,18 @@ img {
     .heading p {
         font-size: 0.8em;
         text-transform: uppercase;
+    }
+}
+
+
+
+main {
+    padding-top: 80px; /* Add padding to the top to prevent content from being covered by the navbar */
+}
+
+/* Media query for screens smaller than 768px (typical mobile devices) */
+@media only screen and (max-width: 768px) {
+    main {
+        padding-top: 100px; /* Adjust padding for mobile devices */
     }
 }
