@@ -58,3 +58,13 @@ main p {
     max-width: 800px; /* Set a maximum width for the container */
     text-align: center;
 }
+
+
+/* Media Query for smaller screens */
+@media only screen and (max-width: 600px) {
+    .text-box {
+        max-width: 80%; /* Set a smaller maximum width for the container */
+    }
+}
+
+

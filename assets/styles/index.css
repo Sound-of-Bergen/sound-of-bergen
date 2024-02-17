@@ -233,7 +233,7 @@ iframe {
         grid-template-rows: auto;
     }
 
-    .media-container > #about_project p{
+    .media-container > p{
         grid-column: 1;
         order: 1;
     }
