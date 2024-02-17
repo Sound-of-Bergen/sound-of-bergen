@@ -1,15 +1,16 @@
 @import "./hide_scrollbar.css";
 @import "../styles/navigation.css";
 @import "../styles/footer.css";
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 body {
-	font-family: 'Ibarra Real Nova', serif;
+	font-family: "PT Sans", sans-serif;
 	background-image: url(../media/backgrounds/floyen.jpeg);
 	background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
-	padding: 0;
-	margin: 0;
+	padding: 2;
+	margin: 1;
 	/* align-items: center; */
 	display: flex;
 	flex-direction: column;

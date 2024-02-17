@@ -1,6 +1,8 @@
 @import "./hide_scrollbar.css";
 @import "../styles/navigation.css";
 @import "../styles/footer.css";
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
 /* general */
 
 body {
@@ -8,10 +10,11 @@ body {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	padding: 0;
-	margin: 0;
-
-	font-family: 'Ibarra Real Nova', serif;
+	padding: 1;
+	margin: 1;
+    font-family: "PT Sans", sans-serif;
+    height: 100%;
+    font-weight: 400;
 }
 
 h1 {
@@ -23,28 +26,34 @@ h1 {
 main p {
 	text-align: center;
 	color: #fdfdfd;
-	font-size: 1em;
+	font-size: 1.5em;
 	padding: 0.5em;
 }
 
 /* css für navigation einfügen, wenn fertig */
 
 .grid-container {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr 1fr 1fr;
-	gap: 20px;
-	max-width: 80%;
-	margin: 0 auto;
-	padding: 2em;
+    display: -webkit-grid; /* Safari */
+    display: grid; /* Standard */
+    grid-template-columns: repeat(2, 1fr); /* Two columns by default */
+    grid-auto-rows: 1fr; /* Set the height of grid rows */
+    justify-items: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    grid-gap: 20px; /* Set the gap between grid items (both horizontally and vertically) */
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 2em;
 }
+
 
 .grid-item {
 	background: #fdfdfd;
 	text-align: center;
-	padding: 0.2em;
+	padding: 0.10em;
 	position: relative;
 	overflow: hidden; 
+	width: 450px; /* Set the width of each grid item */
+    height: 300px; /* Set the height of each grid item */
 }
 
 .image-overlay {
@@ -83,3 +92,13 @@ img {
 	position: relative; /* Add this line to ensure z-index works */
     z-index: 1;
 }
+
+/* Adjust grid layout for screens smaller than 768px (typical mobile devices) */
+@media screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr); /* Single column for mobile */
+        grid-gap: 10px; /* Decrease gap for mobile */
+        max-width: 90%; /* Adjust maximum width for mobile */
+    }
+}
+

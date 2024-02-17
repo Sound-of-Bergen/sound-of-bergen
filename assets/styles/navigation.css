@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&family=Martian+Mono:wght@600&family=Neuton:wght@200&family=Sono&display=swap');
+/* This is a single-line comment 
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&family=Martian+Mono:wght@600&family=Neuton:wght@200&family=Sono&display=swap');*/
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 .navbar {
     display: flex;
