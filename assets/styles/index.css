@@ -40,6 +40,9 @@ h1 {
     -ms-animation: fadeInTop 1s;
     animation-duration: 10s;
     animation-fill-mode: both
+    position: absolute;
+    top: 50%; /* Position at 50% from the top */
+    transform: translateY(-50%); /* Translate up by 50% of its own height */
 }
 
 section {
@@ -71,6 +74,7 @@ header {
     align-items: center;
     position: relative;
     color: #fdfdfd;
+    justify-content: center; /* Horizontally center the content */
 }
 
 footer {
@@ -200,18 +204,24 @@ footer {
 
 /* The media queries for a phone starts here  */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 769px) {
+    header a {
+        font-size: 0.6em;
+    }
 
     .heading {
         margin-right: 20%;
     }
+
     h1 {
-        font-size: 1.4em;
-        word-spacing: 1.5px;
+        font-size: 1.4em; /* Adjust font size for mobile */
+        text-align: center; /* Center align text on mobile */
+        width: 90%; /* Adjust width for mobile */
+        top: 50%; /* Position at 50% from the top */
+        transform: translateY(-50%); /* Translate up by 50% of its own height */
     }
     .heading p {
         font-size: 0.8em;
-        text-transform: uppercase;
     }
 
     #ContactUs_form .contactUs_info {
