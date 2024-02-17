@@ -33,7 +33,6 @@ main p {
 /* css für navigation einfügen, wenn fertig */
 
 .grid-container {
-    display: -webkit-grid; /* Safari */
     display: grid; /* Standard */
     grid-template-columns: repeat(2, 1fr); /* Two columns by default */
     grid-auto-rows: 1fr; /* Set the height of grid rows */
