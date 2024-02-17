@@ -44,7 +44,7 @@
     margin-left: 10px; /* Verringert den Abstand zwischen den rechten Links */
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
@@ -60,6 +60,10 @@
 
     .logo-home-link {
         margin-right: 0; /* Remove the right margin for the logo */
+    }
+
+     header a {
+        font-size: 0.6em;
     }
 }
 
