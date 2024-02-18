@@ -16,6 +16,9 @@ body {
     padding: 1;
     font-weight: 400;
     font-style: normal;
+    display: flex;
+    flex-direction: column;
+
 }
 
 html {
@@ -141,11 +144,10 @@ footer {
 
 /* About Project Paragraph Styles */
 #about_project p {
-    max-width: 50%; /* Limit width of text */
-    text-align: left; /* Align text to the left */
-    margin: 0 auto 1em auto; /* Center the text and add spacing below */
-    color: #FFFFFF; /* Adjusted for better readability */
-
+    color: #fdfdfd;
+    max-width: 100%;
+    text-align: left;
+    padding-left: 1.5em;
 }
 
 /* About Project Container Styles */
@@ -171,13 +173,6 @@ footer {
 
 }
 
-#about_project p {
-  color: #fdfdfd;
-    max-width: 100%;
-    text-align: left;
-    padding-left: 1.5em;
-
-}
 
 
 iframe {
