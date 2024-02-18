@@ -171,6 +171,15 @@ footer {
 
 }
 
+#about_project p {
+  color: #fdfdfd;
+    max-width: 100%;
+    text-align: left;
+    padding-left: 1.5em;
+
+}
+
+
 iframe {
     width: 50%;
     aspect-ratio: 16 / 9;
@@ -229,23 +238,28 @@ iframe {
     }
 
     .media-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center horizontally */
+        text-align: center; /* Center text */
+        max-width: 90%; /* Adjust max-width as needed */
+        margin: 0 auto; /* Center horizontally */
     }
 
-    .media-container > p{
-        grid-column: 1;
-        order: 1;
-    }
-
-    .media-container > .video-container{
-        grid-column: 1;
-        order: 2;
-    }
-    
-    .media-container > iframe {
-        grid-column: 1;
-        order: 3;
+    .media-container > p {
         width: 100%;
+        margin-bottom: 1em; /* Add spacing below paragraph */
+    }
+
+    .media-container > .video-container {
+        width: 100%;
+    }
+
+    .media-container > iframe {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border-radius: 12px;
+        display: block;
+        margin: 20px auto;
     }
 }
