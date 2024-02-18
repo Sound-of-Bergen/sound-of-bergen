@@ -29,7 +29,7 @@ h1 {
 main p {
 	text-align: center;
 	color: #fdfdfd;
-	font-size: 1.5em;
+	font-size: 1.0em;
 	padding: 0.5em;
 }
 
@@ -94,7 +94,9 @@ img {
 	position: relative; /* Add this line to ensure z-index works */
     z-index: 1;
 }
-
+main {
+    padding-top: 80px; /* Add padding to the top to prevent content from being covered by the navbar */
+}
 
 /* Adjust grid layout for screens smaller than 768px (typical mobile devices) */
 
@@ -113,17 +115,14 @@ img {
         font-size: 0.8em;
         text-transform: uppercase;
     }
-}
 
-
-
-main {
-    padding-top: 80px; /* Add padding to the top to prevent content from being covered by the navbar */
-}
-
-/* Media query for screens smaller than 768px (typical mobile devices) */
-@media only screen and (max-width: 768px) {
-    main {
+     main {
         padding-top: 100px; /* Adjust padding for mobile devices */
     }
+
 }
+
+
+
+
+

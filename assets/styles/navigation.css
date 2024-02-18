@@ -9,6 +9,7 @@
     background-color: black;
     color: #fdfdfd;
     padding: 0.5em 1em;
+    position: fixed;
     top: 0;
     width: -webkit-fill-available;
     z-index: 1000;
