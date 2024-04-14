@@ -20,12 +20,12 @@ const { currentPage, pages } = Astro.props;
                 <img src="/logos/wave_white.png" alt="Sound of Bergen" height="10" width="40">
             </a>
             
-            <button class="md:hidden" id="hamburgerMenu">
+            <button class="md:hidden text-white" id="hamburgerMenu">
                 <svg height='24' width='24' fill='none' viewBox='0 0 24 24' stroke='currentcolor'><g><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8H20'></path></g><g><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 16H20'></path></g></svg>
             </button>
         </div>
 
-        <div class="bg-dark px-6 hidden md:block flex flex-col w-full md:w-auto md:flex-row md:gap-2" id="pageLinks">
+        <div class="bg-dark pb-10 md:pb-0 px-6 hidden md:block flex flex-col w-full items-center md:w-auto md:flex-row md:gap-2" id="pageLinks">
             {pages.map(p => (
                 <a title={p.title} href={p.url} class="text-sm text-gray-100 relative whitespace-nowrap p-2 md:inline-block font-medium">
                     <span class="text-center">{p.title}</span>
