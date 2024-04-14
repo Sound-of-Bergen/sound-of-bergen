@@ -19,12 +19,10 @@ const pages = [
         <title>Sound of Bergen</title>
     </head>
 
-    <body class="overscroll-none">
+    <body class="overscroll-none bg-black font-ptSans">
         <Navbar currentPage="Home" pages={pages}/>
 
-        <div class="min-h-screen">
-            <slot />
-        </div>
+        <slot />
 
         <Footer />
     </body>

@@ -2,7 +2,37 @@
 import Layout from "../layouts/Layout.astro"
 ---
 
-<Layout />
+<Layout>
+	<!-- hero -->
+	<div class="w-full h-screen bg-[url('/backgrounds/header_picture.jpeg')] bg-no-repeat bg-cover flex align-center justify-center items-center" style="background-position: center 70%;">
+		<div class="text-white font-bold flex flex-col items-center gap-4">
+			<h1 class="uppercase break-normal font-ibarra text-4xl">Sound of Bergen</h1>
+			<p class="lowercase break-words font-light">Experience. Listen. Feel.</p>
+			<div class="mt-8 text-white">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="24" height="24"><path fill="currentColor" d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg>
+			</div>
+		</div>
+	</div>
+
+	<!-- about project -->
+	<div class="bg-[#010440] p-10 md:py-20 flex flex-col w-full items-center">
+		<div class="max-w-[600px] flex flex-col gap-8">
+			<iframe class="w-full aspect-video" src="https://www.youtube.com/embed/QGekcMzUxz4?autoplay=0&mute=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+			<p class="text-white">
+				Sound of Bergen is about Bergen, music, and people.
+				<br><br>
+				It explores the dynamic music scene in Bergen and the people who influence and shape it. 
+				This website compiles interviews and photos with artists, originally created as part of the Sound of Bergen series for Bergen Student TV.
+				Here, you'll find a comprehensive overview and deeper insights into the project.
+				Explore the profiles of the talented artists enriching Bergen's music scene and enjoy their music!
+			</p>
+	
+			<iframe class="w-full" src="https://open.spotify.com/embed/playlist/1bNSoCH5FymYCoonTFA0qD?utm_source=generator&theme=0" width="50%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    
+		</div>
+	</div>
+</Layout>
 
 
 <!-- <nav class="navbar">
