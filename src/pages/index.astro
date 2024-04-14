@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import ArtistProfile from "../components/ArtistProfile.astro"
 ---
 
 <Layout>
@@ -15,23 +16,11 @@ import Layout from "../layouts/Layout.astro"
 	</div>
 
 	<!-- about project -->
-	<div class="bg-[#010440] p-10 md:py-20 flex flex-col w-full items-center">
-		<div class="max-w-[600px] flex flex-col gap-8">
-			<iframe class="w-full aspect-video" src="https://www.youtube.com/embed/QGekcMzUxz4?autoplay=0&mute=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-			<p class="text-white">
-				Sound of Bergen is about Bergen, music, and people.
-				<br><br>
-				It explores the dynamic music scene in Bergen and the people who influence and shape it. 
-				This website compiles interviews and photos with artists, originally created as part of the Sound of Bergen series for Bergen Student TV.
-				Here, you'll find a comprehensive overview and deeper insights into the project.
-				Explore the profiles of the talented artists enriching Bergen's music scene and enjoy their music!
-			</p>
-	
-			<iframe class="w-full" src="https://open.spotify.com/embed/playlist/1bNSoCH5FymYCoonTFA0qD?utm_source=generator&theme=0" width="50%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    
-		</div>
-	</div>
+	<ArtistProfile 
+		youtubeLink="https://www.youtube.com/embed/QGekcMzUxz4?autoplay=0&mute=0"
+		description="Sound of Bergen is about Bergen, music, and people.<br><br>It explores the dynamic music scene in Bergen and the people who influence and shape it. This website compiles interviews and photos with artists, originally created as part of the Sound of Bergen series for Bergen Student TV. Here, you'll find a comprehensive overview and deeper insights into the project. Explore the profiles of the talented artists enriching Bergen's music scene and enjoy their music!"
+		spotifyLink="https://open.spotify.com/embed/playlist/1bNSoCH5FymYCoonTFA0qD?utm_source=generator&theme=0"
+	/>
 </Layout>
 
 
