@@ -1,0 +1,30 @@
+---
+import Navbar from "../components/Navbar.astro"
+import Footer from "../components/Footer.astro"
+
+const pages = [
+    { title: "Home", url: "/" },
+    { title: "Music Scene in Bergen", url: "/music_scene" },
+    { title: "Artists", url: "/artists" },
+    { title: "Events", url: "/events" },
+    { title: "About Us", url: "/about_us" }
+];
+---
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sound of Bergen</title>
+    </head>
+
+    <body class="overscroll-none">
+        <Navbar currentPage="Home" pages={pages}/>
+
+        <div class="min-h-screen">
+            <slot />
+        </div>
+
+        <Footer />
+    </body>

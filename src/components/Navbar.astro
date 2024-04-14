@@ -1,0 +1,56 @@
+---
+interface Props {
+	currentPage: string;
+    pages: {
+        title: string;
+        url: string;
+    }[];
+}
+
+const regularMenuItemStyle = "text-sm contrast-more:text-gray-700 contrast-more:dark:text-gray-100 relative whitespace-nowrap p-2 md:inline-block text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
+const activeMenuItemStyle = "text-sm contrast-more:text-gray-700 contrast-more:dark:text-gray-100 relative whitespace-nowrap p-2 md:inline-block font-medium"
+
+const { currentPage, pages } = Astro.props;
+---
+
+<div class="nav-container font-ibarra sticky top-0 z-20 w-full px-10 bg-black gap-0 border-b-[0.5px] border-solid border-[#e5e7eb]/[.30] uppercase">
+    <nav class="bg-dark w-full flex flex-col md:flex-row items-center justify-between gap-2 max-w-[90rem]">
+        <div class="flex w-full h-12 justify-between md:w-auto">
+            <a class="flex items-center hover:opacity-75 content-center" href="/">
+                <img src="/logos/wave_white.png" alt="Sound of Bergen" height="10" width="40">
+            </a>
+            
+            <button class="md:hidden" id="hamburgerMenu">
+                <svg height='24' width='24' fill='none' viewBox='0 0 24 24' stroke='currentcolor'><g><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8H20'></path></g><g><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 16H20'></path></g></svg>
+            </button>
+        </div>
+
+        <div class="bg-dark px-6 hidden md:block flex flex-col w-full md:w-auto md:flex-row md:gap-2" id="pageLinks">
+            {pages.map(p => (
+                <a title={p.title} href={p.url} class="text-sm text-gray-100 relative whitespace-nowrap p-2 md:inline-block font-medium">
+                    <span class="text-center">{p.title}</span>
+                </a>
+                ))}
+        </div>
+
+        <script>
+            const hamburger = "<svg height='24' width='24' fill='none' viewBox='0 0 24 24' stroke='currentcolor'><g><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8H20'></path></g><g><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 16H20'></path></g></svg>";
+            const xmark = "<svg height='24' width='24' fill='currentcolor' stroke='currentcolor' viewBox='0 0 384 512'><path d='M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z'/></svg>";
+
+            function menuToggle() {
+                var links = document.getElementById("pageLinks");
+                var button = document.getElementById("hamburgerMenu");
+
+                if (links.style.display === "none") {
+                    links.style.display = "flex";
+                    button.innerHTML = xmark;
+                } else {
+                    links.style.display = "none";
+                    button.innerHTML = hamburger;
+                }
+            }
+
+            document.querySelector("button").addEventListener("click", menuToggle);
+        </script>
+    </nav>
+</div>
