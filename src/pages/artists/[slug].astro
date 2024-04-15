@@ -1,0 +1,30 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import ArtistProfile from '../../components/ArtistProfile.astro';
+
+const { slug } = Astro.params;
+
+export async function getStaticPaths() {
+  const artists = await getCollection('artists');
+  return artists.map((artist) => ({ params: { slug: artist.slug }, props: {artist} } ));
+};
+
+const { artist } = Astro.props;
+console.log(artist);
+const { Content } = await artist.render()
+---
+
+<Layout>
+    <div class="bg-[url('/backgrounds/header_picture.jpeg')] p-8 gap-8 md:py-20 flex flex-col w-full items-center">
+        <div class="text-white font-bold flex flex-col items-center gap-12">
+            <!-- hero -->
+            <h1 class="uppercase break-normal font-ibarra text-4xl">{artist.data.artist}</h1>
+        </div>
+        
+        <ArtistProfile 
+            youtubeLink={artist.data.youtubeLink}
+            description={artist.body}
+            spotifyLink={artist.data.spotifyLink} />
+    </div>
+</Layout>

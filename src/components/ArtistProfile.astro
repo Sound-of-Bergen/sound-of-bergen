@@ -8,14 +8,12 @@ interface Props {
 const { youtubeLink, description, spotifyLink } = Astro.props;
 ---
 
-<div class="bg-[#010440] p-10 md:py-20 flex flex-col w-full items-center">
-    <div class="max-w-[600px] flex flex-col gap-8">
-        <iframe class="w-full aspect-video" src={ youtubeLink } frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="max-w-[600px] flex flex-col gap-8">
+    <iframe class="w-full aspect-video" src={ youtubeLink } frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-        <p class="text-white">
-            { description }
-        </p>
+    <p class="text-white">
+        { description }
+    </p>
 
-        <iframe class="w-full" src={ spotifyLink } width="50%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    </div>
+    <iframe class="w-full" src={ spotifyLink } width="50%" height="352" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 </div>

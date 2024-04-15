@@ -1,0 +1,38 @@
+---
+import { getCollection } from 'astro:content'
+import Layout from "../../layouts/Layout.astro"
+import ArtistCard from "../../components/ArtistCard.astro"
+
+// get all artists
+const artists = await getCollection('artists')
+---
+
+<Layout>
+	<div class="w-full bg-[url('/backgrounds/header_picture.jpeg')] bg-no-repeat bg-cover flex justify-center py-16">
+		<div class="text-white font-bold flex flex-col items-center gap-12">
+			<!-- hero -->
+			<h1 class="uppercase break-normal font-ibarra text-4xl">Artists</h1>
+			<div class="flex flex-col justify-center text-center">
+				<p class="lowercase break-words font-light">
+					Explore more about the musicians behind the melodies!
+				</p>
+				<p class="lowercase break-words font-light">
+					Click on the photos to uncover exclusive content and dive deeper into their 
+					unique stories that accompany their artistry.
+				</p>
+			</div>
+
+			<!-- artist list -->
+			<div class="grid grid-cols-2 gap-8">
+				{artists.map((a) => (
+					<ArtistCard
+						artist={a.data.artist}
+						imagePath={a.data.imagePath}
+						altText={a.data.altText}
+						link={`/artists/${a.slug}`} />
+				))}
+			</div>
+		</div>
+	</div>
+	
+</Layout>

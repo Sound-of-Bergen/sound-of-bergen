@@ -25,7 +25,7 @@ const { currentPage, pages } = Astro.props;
             </button>
         </div>
 
-        <div class="bg-dark pb-10 md:pb-0 px-6 hidden md:block flex flex-col w-full items-center md:w-auto md:flex-row md:gap-2" id="pageLinks">
+        <div class="bg-dark pb-10 md:pb-0 px-6 hidden md:block flex flex-col w-full items-center md:w-auto md:flex-row md:gap-6" id="pageLinks">
             {pages.map(p => (
                 <a title={p.title} href={p.url} class="text-sm text-gray-100 relative whitespace-nowrap p-2 md:inline-block font-medium">
                     <span class="text-center">{p.title}</span>

@@ -1,0 +1,17 @@
+---
+interface Props {
+	imagePath: string;
+    altText: string;
+    link: string;
+    artist: string;
+}
+
+const { imagePath, altText, link, artist } = Astro.props;
+---
+
+<a href={ link }>
+    <div class=`w-[350px] h-[200px] relative stack border transition ease-in-out delay-20 border-white md:hover:scale-110 md:hover:shadow-3xl`>
+        <img src={ imagePath } alt={ altText } class="object-cover" />
+        <p class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-3xl text-center">{ artist }</p>
+    </div>
+</a>
